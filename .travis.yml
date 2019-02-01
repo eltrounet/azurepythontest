@@ -1,0 +1,13 @@
+language: python
+python:
+	- "3.5"
+
+# command to install the dependencies
+install:
+	- pip install -r requirements.txt
+
+# command to run the tests 
+script:
+	- export PYTHONPATH=$PYTHONPATH:$(pwd)
+	- python test/app-test.py
+
